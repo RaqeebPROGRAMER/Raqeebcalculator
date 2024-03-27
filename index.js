@@ -1,8 +1,10 @@
 #! /usr/bin/env node
-import inquirer from "inquirer";
-const asnwer = await inquirer.prompt([
-    { message: "Enter first number", type: "number", name: "firstNumber" },
-    { message: "enter second number", type: "number", name: "secondNumber" },
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var inquirer_1 = require("inquirer");
+var asnwer = await inquirer_1.default.prompt([
+    { message: "Enter your first number", type: "number", name: "firstNumber" },
+    { message: "Enter your second number", type: "number", name: "secondNumber" },
     {
         message: "select one of the operators to perform operation ",
         type: "list",
@@ -26,3 +28,4 @@ else if (asnwer.operator === "Division") {
 else {
     console.log("please select valid operator");
 }
+console.log("THE END");
